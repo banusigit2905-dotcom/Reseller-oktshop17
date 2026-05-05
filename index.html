@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseller Oktshop17</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HALAMAN LOGIN -->
+    <div id="login-page" class="container">
+        <h1>Reseller Oktshop17</h1>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-pass" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>Belum punya akun? Hubungi Admin.</p>
+    </div>
+
+    <!-- 2. DASHBOARD UTAMA -->
+    <div id="main-app" class="hidden">
+        <nav>
+            <span id="user-name-display">Hi, User</span>
+            <button onclick="logout()">Logout</button>
+        </nav>
+
+        <div id="reseller-view" class="hidden">
+            <div class="card">
+                <h3>Poin Reseller</h3>
+                <p id="reseller-points">0 Poin</p>
+            </div>
+
+            <!-- Menu Katalog -->
+            <h2>Katalog Produk</h2>
+            <div id="catalog-list" class="grid"></div>
+
+            <!-- Menu User -->
+            <div class="menu-user">
+                <button onclick="showSection('profile-section')">Profil</button>
+                <button onclick="showSection('order-status-section')">Status Pesanan</button>
+            </div>
+        </div>
+
+        <!-- 3. MENU ADMIN -->
+        <div id="admin-view" class="hidden">
+            <h2>Admin Panel</h2>
+            <div class="admin-grid">
+                <button onclick="openAdminMenu('update-katalog')">Update Katalog</button>
+                <button onclick="openAdminMenu('user-list')">Jumlah Reseller</button>
+                <button onclick="openAdminMenu('orders-in')">Pesanan Masuk</button>
+                <button onclick="openAdminMenu('bank-settings')">Update Rekening</button>
+            </div>
+            <div id="admin-content-area"></div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (Versi Modular) -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
