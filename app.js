@@ -3,14 +3,14 @@ import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from
 import { getFirestore, doc, getDoc, collection, getDocs, updateDoc, addDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 const firebaseConfig = {
-    // Masukkan Konfigurasi Firebase Anda di sini
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "YOUR_ID",
-    appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyCoZWGE0KSklSC_lt4TSCChu0-JsY2-_s8",
+    authDomain: "reseller-oktshop17-b36dd.firebaseapp.com",
+    projectId: "reseller-oktshop17-b36dd",
+    storageBucket: "reseller-oktshop17-b36dd.firebasestorage.app",
+    messagingSenderId: "1023487903691",
+    appId: "1:1023487903691:web:5d19a6331c9ed5ac43984e",
+    measurementId: "G-56NK05F5E4"
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
